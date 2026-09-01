@@ -4,6 +4,8 @@ import escapeBraces from '../plugins/escapeBraces.js'
 
 // VitePress 自身配置
 const vitePressConfig = {
+  // 部署路径：GitHub Actions 里自动用仓库项目页路径，本地开发用根路径
+  base: process.env.GITHUB_ACTIONS ? '/it-notes-dingtongbin/' : '/',
   // 是否忽略死链。false 表示存在无效链接时构建直接报错
   ignoreDeadLinks: false,
   // 自定义主题目录
