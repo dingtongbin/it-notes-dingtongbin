@@ -1,4 +1,4 @@
-***
+﻿---
 
 # <https://vitepress.dev/reference/default-theme-home-page>
 
@@ -43,5 +43,4 @@ features:
   details: 标准md语法
   link: /guide/md
 
-***
-
+---
