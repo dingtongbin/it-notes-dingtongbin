@@ -40,7 +40,7 @@ const vitePressConfig = {
     // 顶部导航栏
     nav: [
       { text: '首页', link: '/' },
-      { text: 'python', link: '/guide/python/01-安装python' },
+      { text: 'python', link: '/guide/python/base/01-安装python' },
       { text: 'go', link: '/guide/go/' },
       { text: '前端', link: '/guide/frontend/' },
       { text: 'linux', link: '/guide/linux/' },
