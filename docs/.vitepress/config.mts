@@ -40,7 +40,7 @@ const vitePressConfig = {
     // 顶部导航栏
     nav: [
       { text: '首页', link: '/' },
-      { text: 'python', link: '/guide/python/' },
+      { text: 'python', link: '/guide/python/01-安装python' },
       { text: 'go', link: '/guide/go/' },
       { text: '前端', link: '/guide/frontend/' },
       { text: 'linux', link: '/guide/linux/' },
@@ -68,15 +68,30 @@ const vitePressConfig = {
  * - link 为相对路径，Vitepress 会以 base(=resolvePath) 拼接成 /guide/xxx/页面
  * 使用 withSidebar 才能在新增/删除文件时热更新侧边栏。
  */
+/**
+ * 公共选项：
+ * - sortMenusByName           : 按文件名排序（01- 在前，02- 次之…）
+ * - useTitleFromFrontmatter   : 用 frontmatter 的 title 做侧边栏显示名
+ * - removePrefixAfterOrdering : 排序后自动去掉 "01-"、"02-" 等数字前缀
+ * - prefixSeparator            : 前缀分隔符，默认 "-"
+ */
+const commonOpts = {
+  documentRootPath: 'docs',
+  sortMenusByName: true,
+  useTitleFromFrontmatter: true,
+  removePrefixAfterOrdering: true,
+  prefixSeparator: '-'
+}
+
 const sidebarOptions = [
-  { documentRootPath: 'docs', scanStartPath: 'guide/python', resolvePath: '/guide/python/', sortMenusByName: true, useTitleFromFrontmatter: true },
-  { documentRootPath: 'docs', scanStartPath: 'guide/go', resolvePath: '/guide/go/', sortMenusByName: true, useTitleFromFrontmatter: true },
-  { documentRootPath: 'docs', scanStartPath: 'guide/frontend', resolvePath: '/guide/frontend/', sortMenusByName: true, useTitleFromFrontmatter: true },
-  { documentRootPath: 'docs', scanStartPath: 'guide/linux', resolvePath: '/guide/linux/', sortMenusByName: true, useTitleFromFrontmatter: true },
-  { documentRootPath: 'docs', scanStartPath: 'guide/k8s', resolvePath: '/guide/k8s/', sortMenusByName: true, useTitleFromFrontmatter: true },
-  { documentRootPath: 'docs', scanStartPath: 'guide/agent', resolvePath: '/guide/agent/', sortMenusByName: true, useTitleFromFrontmatter: true },
-  { documentRootPath: 'docs', scanStartPath: 'guide/git', resolvePath: '/guide/git/', sortMenusByName: true, useTitleFromFrontmatter: true },
-  { documentRootPath: 'docs', scanStartPath: 'guide/md', resolvePath: '/guide/md/', sortMenusByName: true, useTitleFromFrontmatter: true }
+  { ...commonOpts, scanStartPath: 'guide/python',   resolvePath: '/guide/python/' },
+  { ...commonOpts, scanStartPath: 'guide/go',       resolvePath: '/guide/go/' },
+  { ...commonOpts, scanStartPath: 'guide/frontend', resolvePath: '/guide/frontend/' },
+  { ...commonOpts, scanStartPath: 'guide/linux',    resolvePath: '/guide/linux/' },
+  { ...commonOpts, scanStartPath: 'guide/k8s',      resolvePath: '/guide/k8s/' },
+  { ...commonOpts, scanStartPath: 'guide/agent',    resolvePath: '/guide/agent/' },
+  { ...commonOpts, scanStartPath: 'guide/git',      resolvePath: '/guide/git/' },
+  { ...commonOpts, scanStartPath: 'guide/md',       resolvePath: '/guide/md/' }
 ]
 
 export default defineConfig(withSidebar(vitePressConfig, sidebarOptions))

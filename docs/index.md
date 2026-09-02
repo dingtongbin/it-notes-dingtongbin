@@ -10,7 +10,7 @@ hero:
 features:
   - title: python笔记
     details: python3.12+基础库+丰富的三方库
-    link: /guide/python
+    link: /guide/python/01-安装python
 
   - title: go笔记
     details: go1.25+基础库+网络库
