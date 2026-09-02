@@ -42,10 +42,10 @@ const vitePressConfig = {
     nav: [
       { text: '首页', link: '/' },
       { text: 'python', link: '/guide/python/基础语法/01-安装python' },
-      { text: 'go', link: '/guide/go/' },
+      { text: 'go', link: '/guide/go/基础语法/01-环境搭建与运行' },
       { text: '前端', link: '/guide/frontend/' },
-      { text: 'linux', link: '/guide/linux/' },
-      { text: 'k8s', link: '/guide/k8s/' },
+      { text: 'linux', link: '/guide/linux/01-Ubuntu基础/01-认识ubuntu与发行版' },
+      { text: 'k8s', link: '/guide/k8s/docker/01-容器是什么从隔离到分发' },
       { text: '智能体', link: '/guide/agent/' },
       { text: 'git使用', link: '/guide/git/' },
       { text: 'md语法', link: '/guide/md/' },

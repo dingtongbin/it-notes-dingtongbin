@@ -1,4 +1,4 @@
-﻿---
+---
 
 # <https://vitepress.dev/reference/default-theme-home-page>
 
@@ -17,7 +17,7 @@ features:
 
 - title: go笔记
   details: go1.25+基础库+网络库
-  link: /guide/go
+  link: /guide/go/基础语法/01-环境搭建与运行
 
 - title: 前端笔记
   details: html+css+js+ts+vue3
@@ -25,11 +25,11 @@ features:
 
 - title: linux笔记
   details: 基础以ubantu为主
-  link: /guide/linux
+  link: /guide/linux/01-Ubuntu基础/01-认识ubuntu与发行版
 
 - title: k8s
   details: 围绕k8s生态
-  link: /guide/k8s
+  link: /guide/k8s/docker/01-容器是什么从隔离到分发
 
 - title: 智能体
   details: python开发智能体为主
