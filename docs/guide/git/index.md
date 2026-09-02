@@ -1,7 +1,5 @@
----
-title: git 使用
+﻿---
+title: git使用
 ---
 
-# git 使用
-
-Git 使用笔记入口。
+# git使用Git使用笔记入口。

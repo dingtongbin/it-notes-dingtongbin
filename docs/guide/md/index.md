@@ -1,7 +1,5 @@
----
-title: md 语法
+﻿---
+title: md语法
 ---
 
-# md 语法
-
-Markdown 语法笔记入口。
+# md语法Markdown语法笔记入口。

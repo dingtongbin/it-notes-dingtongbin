@@ -27,7 +27,8 @@ const vitePressConfig = {
     ]
   ],
   markdown: {
-    // 注册自定义 markdown 插件（转义花括号）
+    // 保留 markdown 的 HTML 功能（<!-- 注释 -->、<br> 等正常生效），
+    // 但在 escapeBraces 插件里精准转义「裸 <xxx>」，不让 Vue 编译器误当标签报错
     config(md) {
       md.use(escapeBraces)
     }
@@ -40,7 +41,7 @@ const vitePressConfig = {
     // 顶部导航栏
     nav: [
       { text: '首页', link: '/' },
-      { text: 'python', link: '/guide/python/base/01-安装python' },
+      { text: 'python', link: '/guide/python/基础语法/01-安装python' },
       { text: 'go', link: '/guide/go/' },
       { text: '前端', link: '/guide/frontend/' },
       { text: 'linux', link: '/guide/linux/' },
@@ -70,14 +71,14 @@ const vitePressConfig = {
  */
 /**
  * 公共选项：
- * - sortMenusByName           : 按文件名排序（01- 在前，02- 次之…）
- * - useTitleFromFrontmatter   : 用 frontmatter 的 title 做侧边栏显示名
- * - removePrefixAfterOrdering : 排序后自动去掉 "01-"、"02-" 等数字前缀
- * - prefixSeparator            : 前缀分隔符，默认 "-"
+ * - sortMenusOrderNumericallyFromLink : 按链接（文件名）里的数字前缀排序（01- < 02- < … < 10-）
+ * - useTitleFromFrontmatter           : 显示文本优先用 frontmatter 的 title
+ * - removePrefixAfterOrdering         : 排序后去掉 "01-"、"02-" 等数字前缀（仅显示效果，不影响排序依据）
+ * - prefixSeparator                    : 前缀分隔符
  */
 const commonOpts = {
   documentRootPath: 'docs',
-  sortMenusByName: true,
+  sortMenusOrderNumericallyFromLink: true,
   useTitleFromFrontmatter: true,
   removePrefixAfterOrdering: true,
   prefixSeparator: '-'
