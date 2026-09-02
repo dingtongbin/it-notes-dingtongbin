@@ -8,7 +8,7 @@ title: 安装python
 
 ### windows
 
-1、 打开官网 [Python Releases for Windows | Python.org](https://www.python.org/downloads/windows/)，找到Python 3.14.x 的 Windows installer（64-bit）并下载。
+1、 打开官网 [Python Releases for Windows | Python.org](https://www.python.org/downloads/windows/)，找到Python 3.12.x 的 Windows installer（64-bit）并下载。
 
 2、安装时必须勾选底部的"Add python.exe to PATH"，然后点击install Now。如果不勾选的话，安装完之后在cmd命令行输入"python"会"提示不是内部或外部命令"。
 
@@ -18,7 +18,7 @@ title: 安装python
 
 ```bash
 python --version
-#会输出 Python 3.14.x
+#会输出 Python 3.12.x
 ```
 
 ## python的两种运行方法
@@ -31,7 +31,7 @@ python有两种运行方法，交互式（像命令行一样输一行返回一�
 
 ```bash
 C:\Users\30978>python
-Python 3.14.3 (main, Feb  5 2026, 13:34:54)  [MINGW GCC UCRT 15.2.0 64 bit (AMD64)] on win32
+Python 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 1+1
 2
